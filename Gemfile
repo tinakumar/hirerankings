@@ -11,10 +11,11 @@ end
 
 group :development, :test do
   gem 'sqlite3'
+  gem 'sunspot_solr'
 end
 
 gem 'sunspot_rails'
-gem 'sunspot_solr'
+
 
 gem 'sass-rails', '~> 4.0.0'
 
