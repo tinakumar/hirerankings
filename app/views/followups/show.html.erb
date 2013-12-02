@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Reply:</strong>
+  <%= @followup.reply %>
+</p>
+
+<p>
+  <strong>Offer:</strong>
+  <%= @followup.offer %>
+</p>
+
+<%= link_to 'Edit', edit_followup_path(@followup) %> |
+<%= link_to 'Back', followups_path %>

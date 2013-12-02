@@ -1,0 +1,29 @@
+<h1>Listing followups</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Reply</th>
+      <th>Offer</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @followups.each do |followup| %>
+      <tr>
+        <td><%= followup.reply %></td>
+        <td><%= followup.offer %></td>
+        <td><%= link_to 'Show', followup %></td>
+        <td><%= link_to 'Edit', edit_followup_path(followup) %></td>
+        <td><%= link_to 'Destroy', followup, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Followup', new_followup_path %>
