@@ -20,11 +20,11 @@ Company.create(name: 'Twitter', city: 'San Francisco', state: 'CA');
 Question.create(category: 'Technical', body: 'Describe  how  a  hash  table  works. ');
 Question.create(category: 'General', body: 'What is your greatest weakness?');
 Question.create(category: 'Code Challenge', body: 'Reverse a string.');
-Question.create(category: 'Technical', body: 'Given  an  array, describe  an  algorithm to identify the subarray  with  the maximum  sum.  ');
+Question.create(category: 'Technical', body: 'Given  an  array,  describe  an  algorithm  to  identify  the  subarray  with  the  maximum  sum.  ');
 Question.create(category: 'General', body: 'Describe a time when you encountered conflict in a work situation.');
 Question.create(category: 'Code Challenge', body: 'Write  a  function  to  remove  a  single  occurrence  of  an  integer  from  a  doubly  linked  list  if  it  is  present.');
-Question.create(category: 'Techncial', body: 'Describe  a  good  strategy  to  find  a  bug  in  a program.');
+Question.create(category: 'Techncial', body: 'Describe  a  good  strategy  to  find  a  bug  in  a  program.');
 Question.create(category: 'General', body: 'What is your greatest accomplishment?');
-Question.create(category: 'Code Challenge', body: 'Without  writing  any  actual  code, describe  as  much  as  possible  how  you  would  design  a  poker  game  program.');
-Question.create(category: 'Technical', body: 'Describe  a  queue  data  structure  that  is  implemented  using one or  more stacks.  ')
+Question.create(category: 'Code Challenge', body: 'Without  writing  any  actual  code,  describe  as  much  as  possible  how  you  would  design  a  poker  game  program.');
+Question.create(category: 'Technical', body: 'Describe  a  queue  data  structure  that  is  implemented  using  one  or  more  stacks.  ')
 
