@@ -36,6 +36,9 @@ gem 'omniauth-twitter'
 
 gem 'foundation-rails'
 
+gem 'carrierwave'
+gem "rmagick"
+
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 

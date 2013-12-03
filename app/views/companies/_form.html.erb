@@ -23,6 +23,11 @@
     <%= f.label :state %><br>
     <%= f.text_field :state %>
   </div>
+  <div class="field">
+    <%= f.file_field :logo %>
+  </div>
+  <%= f.label :remote_image_url, "or logo URL" %>
+    <%= f.text_field :remote_image_url %>
   <div class="actions">
     <%= f.submit %>
   </div>
