@@ -13,6 +13,12 @@ group :development, :test do
   gem 'sqlite3'
   gem 'sunspot_solr'
   gem 'pry'
+  gem 'minitest-rails'
+  gem 'minitest-rails-capybara'
+  gem 'capybara-webkit'
+  gem 'launchy'
+  gem 'turn'
+  gem 'simplecov', :require => false
 end
 
 gem 'sunspot_rails'
