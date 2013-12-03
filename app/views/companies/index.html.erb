@@ -1,5 +1,3 @@
-
-
 <div class="row">
   <br/>
 
@@ -9,29 +7,12 @@
   <%= submit_tag "Search", :name => nil %>
   <% end %>
 
-
   <% @companies.each do |company| %>
-
     <h1><%= company.name %></h1>
-    <h3><%= company.city %>, 
-    <%= company.state %></h3>
+    <h3><%= company.city %>,
+        <%= company.state %></h3>
 
-    <% company.questions.each do |q| %>
-      <%= q.category %>
-      <%= q.body %>
-      <% end %>
-
-    <p>
-
-    </p>
-
-    <p> Have you interviewed with <%= company.name %>? 
-      <%= link_to 'Click Here', new_company_path %> to add question(s) or a review!</p>
-
-
-
-      <hr/>
-
+<hr/>
 
   <% end %>
 

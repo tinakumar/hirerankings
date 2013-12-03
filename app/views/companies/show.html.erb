@@ -1,24 +1,35 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
+<h2>
+  <%= image_tag @company.logo, :size => "200x200" %>
   <%= @company.name %>
-</p>
+</h2>
 
-<p>
-  <strong>City:</strong>
-  <%= @company.city %>
-</p>
+<hr/>
+ <h4>Interview questions provided by users: </h4>
+  <br>
 
-<p>
-  <strong>State:</strong>
-  <%= @company.state %>
-</p>
+<table>
+  <thead>
+    <tr>
+      <th>Category:</th>
+      <th>Question:</th>
+      </tr>
+  </thead>
 
-<p>
-  <strong>State:</strong>
-  <%= @company.logo %>
-</p>
+  <tbody>
+    <% @company.questions.each do |q| %>
+      <tr>
+        <td><%= q.category %></td>
+        <td><%= q.body %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<hr/>
+
+<p> Have you interviewed with <%= @company.name %>?
+      <%= link_to 'Click Here', new_question_path %> to add question(s).</p>
 
 <%= link_to 'Edit', edit_company_path(@company) %> |
 <%= link_to 'Back', companies_path %>

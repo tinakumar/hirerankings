@@ -24,6 +24,7 @@ class CompaniesController < ApplicationController
 
   # GET /companies/1/edit
   def edit
+    #authorize @company
   end
 
   # POST /companies
@@ -45,6 +46,7 @@ class CompaniesController < ApplicationController
   # PATCH/PUT /companies/1
   # PATCH/PUT /companies/1.json
   def update
+    #authorize @company
     respond_to do |format|
       if @company.update(company_params)
         format.html { redirect_to @company, notice: 'Company was successfully updated.' }
