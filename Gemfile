@@ -12,6 +12,7 @@ end
 group :development, :test do
   gem 'sqlite3'
   gem 'sunspot_solr'
+  gem 'pry'
 end
 
 gem 'sunspot_rails'

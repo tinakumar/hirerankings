@@ -1,39 +1,29 @@
 
 
 <%= form_tag companies_path, :method => :get do %>
-  <p>
-    <%= text_field_tag :search, params[:search] %>
-    <%= submit_tag "Search", :name => nil %>
-<% end %>
+<p>
+  <%= text_field_tag :search, params[:search] %>
+  <%= submit_tag "Search", :name => nil %>
+  <% end %>
 
-<h1>Listing companies</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>City</th>
-      <th>State</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
+  <% @companies.each do |company| %>
 
-  <tbody>
-    <% @companies.each do |company| %>
-      <tr>
-        <td><%= company.name %></td>
-        <td><%= company.city %></td>
-        <td><%= company.state %></td>
-        <td><%= link_to 'Show', company %></td>
-        <td><%= link_to 'Edit', edit_company_path(company) %></td>
-        <td><%= link_to 'Destroy', company, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+    <h1><%= company.name %></h1>
+    <h3><%= company.city %>, 
+    <%= company.state %></h3>
 
-<br>
+    <p>
 
-<%= link_to 'New Company', new_company_path %>
+    </p>
+
+    <p> Have you interviewed with <%= company.name %>? 
+      <%= link_to 'Click Here', new_company_path %> to add question(s) or a review!</p>
+
+
+
+      <hr/>
+
+
+  <% end %>
+
