@@ -25,7 +25,7 @@ class FollowupsController < ApplicationController
   # POST /followups.json
   def create
     @followup = Followup.new(followup_params)
-
+    authorize @followup
     respond_to do |format|
       if @followup.save
         format.html { redirect_to @followup, notice: 'Followup was successfully created.' }
@@ -54,7 +54,9 @@ class FollowupsController < ApplicationController
   # DELETE /followups/1
   # DELETE /followups/1.json
   def destroy
+    authorize @followup
     @followup.destroy
+
     respond_to do |format|
       format.html { redirect_to followups_url }
       format.json { head :no_content }
