@@ -8,7 +8,7 @@ class CompaniesController < ApplicationController
       fulltext params[:search]
     end
     @companies = @search.results
-    binding.pry
+    #binding.pry
     #@interviews = Interview.where(:company_id == company.id)
   end
 
