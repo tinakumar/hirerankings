@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131202213116) do
+ActiveRecord::Schema.define(version: 20131203043858) do
 
   create_table "companies", force: true do |t|
     t.string   "name"
@@ -19,6 +19,8 @@ ActiveRecord::Schema.define(version: 20131202213116) do
     t.string   "state"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "logo"
+    t.string   "website"
   end
 
   create_table "followups", force: true do |t|
@@ -65,6 +67,7 @@ ActiveRecord::Schema.define(version: 20131202213116) do
     t.string   "provider"
     t.string   "uid"
     t.string   "username"
+    t.string   "role"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
