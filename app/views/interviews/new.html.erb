@@ -1,5 +1,11 @@
-<h1>New interview</h1>
+<h3>Add a New Question</h3>
+
+<p>Choose from an existing question:</p>
 
 <%= render 'form' %>
 
-<%= link_to 'Back', interviews_path %>
+<%= link_to 'Back', company_path(@company) %>
+<hr/>
+<h3>Can't find your question?</h3>
+
+    <h3><%= link_to ' Click Here!', new_question_path, id: "new_link", remote: true %></h3>

@@ -1,12 +1,13 @@
 Hirerankings::Application.routes.draw do
-  
+
   resources :search_suggestions
 
-  resources :interviews
+
   resources :questions
-  
+
   resources :companies do
     resources :followups
+    resources :interviews
   end
 
   devise_for :users, path_names: {sign_in: "login", sign_out: "logout"}, controllers: {omniauth_callbacks: "omniauth_callbacks"}

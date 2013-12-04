@@ -5,9 +5,9 @@ class QuestionPolicy < ApplicationPolicy
     @question = question
   end
 
-  def create?
-    user.present?
-  end
+  #def create?
+    #user.present?
+  #end
 
   def destroy?
     user.admin?

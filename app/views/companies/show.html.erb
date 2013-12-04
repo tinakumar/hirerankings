@@ -29,7 +29,7 @@
 <hr/>
 
 <p> Have you interviewed with <%= @company.name %>?
-      <%= link_to 'Click Here', new_question_path %> to add question(s).</p>
+      <%= link_to 'Click Here', new_company_interview_path(@company) %> to add question(s).</p>
 
 <%= link_to 'Edit', edit_company_path(@company) %> |
 <%= link_to 'Back', companies_path %>

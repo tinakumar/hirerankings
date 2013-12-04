@@ -25,15 +25,10 @@ class QuestionsController < ApplicationController
   # POST /questions.json
   def create
     @question = Question.new(question_params)
-    authorize @question
+    #authorize @question
     respond_to do |format|
-      if @question.save
         format.html { redirect_to @question, notice: 'Question was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @question }
-      else
-        format.html { render action: 'new' }
-        format.json { render json: @question.errors, status: :unprocessable_entity }
-      end
+        format.js
     end
   end
 

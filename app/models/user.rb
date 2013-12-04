@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
 
   validates_presence_of :username
   validates_uniqueness_of :username
+  validates_uniqueness_of :email
 
   def self.from_omniauth(auth)
     where(auth.slice(:provider, :uid)).first_or_create do |user|
@@ -23,7 +24,7 @@ class User < ActiveRecord::Base
       end
     else
       super
-    end    
+    end
   end
 
   def password_required?

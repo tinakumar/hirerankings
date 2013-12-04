@@ -7,9 +7,6 @@
     <tr>
       <th>Question</th>
       <th>Company</th>
-      <th></th>
-      <th></th>
-      <th></th>
     </tr>
   </thead>
 
@@ -18,17 +15,15 @@
       <tr>
         <td><%= interview.question.body %></td>
         <td><%= interview.company.name %></td>
-        <td><%= link_to 'Show', interview %></td>
-        <td><%= link_to 'Edit', edit_interview_path(interview) %></td>
-        <td><%= link_to 'Destroy', interview, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%#= link_to 'Show', company_path(@company) %></td>
+        <td><%#= link_to 'Edit', edit_company_interview_path(interview) %></td>
+        <td><%#= link_to 'Destroy', company_interview, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
-<%= link_to 'New Interview', new_interview_path %>
 
 <%= link_to 'New Company', new_company_path %>
 

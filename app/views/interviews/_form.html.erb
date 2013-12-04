@@ -1,4 +1,4 @@
-<%= form_for(@interview) do |f| %>
+<%= form_for([@interview.company, @interview]) do |f| %>
   <% if @interview.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@interview.errors.count, "error") %> prohibited this interview from being saved:</h2>
@@ -15,8 +15,9 @@
     <%= f.select :question_id, Question.all.collect { |q| [q.body, q.id] } %><br>
   </div>
   <div class="field">
-    <%= f.select :company_id, Company.all.collect { |c| [c.name, c.id] } %><br>
-  </div>
+    <br>
+    <%= f.select :company_id, Company.all.collect{ |c| [c.name, c.id] }%>
+  </div><br>
   <div class="actions">
     <%= f.submit %>
   </div>

@@ -19,6 +19,7 @@ group :development, :test do
   gem 'launchy'
   gem 'turn'
   gem 'simplecov', :require => false
+  gem 'capybara'
 end
 
 gem 'sunspot_rails'

@@ -1,0 +1,11 @@
+<%= form_for question, remote: true do |f| %>
+<div class="question" id="<%= dom_id(question) %>">
+  <h3><%= question.category %></h3>
+  <p><%= question.body %></p>
+  <div class="nav">
+    <%= link_to 'Show', question %> |
+    <%= link_to 'Edit', edit_question_path(question) %> |
+    <%= link_to 'Destroy', question, method: :delete, data: { confirm: 'Are you sure?' }, remote: true %>
+  </div>
+</div>
+<% end %>

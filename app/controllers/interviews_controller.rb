@@ -4,7 +4,8 @@ class InterviewsController < ApplicationController
   # GET /interviews
   # GET /interviews.json
   def index
-    @interviews = Interview.all
+    company = Company.find(params[:company_id])
+    @interviews = company.interviews
   end
 
   # GET /interviews/1
@@ -14,7 +15,8 @@ class InterviewsController < ApplicationController
 
   # GET /interviews/new
   def new
-    @interview = Interview.new
+    @company = Company.find_by_id(params[:company_id])
+    @interview = @company.interviews.build
   end
 
   # GET /interviews/1/edit
@@ -24,12 +26,13 @@ class InterviewsController < ApplicationController
   # POST /interviews
   # POST /interviews.json
   def create
-    @interview = Interview.new(interview_params)
+    @company = Company.find_by_id(params[:company_id])
+    @interview = @company.interviews.create(interview_params)
 
     respond_to do |format|
       if @interview.save
-        format.html { redirect_to @interview, notice: 'Interview was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @interview }
+        format.html { redirect_to [@interview.company, @interview], notice: 'Interview was successfully created.'}
+        format.json { render action: 'show', status: :created, location: [@interview.company, @interview] }
       else
         format.html { render action: 'new' }
         format.json { render json: @interview.errors, status: :unprocessable_entity }
